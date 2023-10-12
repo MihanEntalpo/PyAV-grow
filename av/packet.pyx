@@ -43,6 +43,9 @@ cdef class Packet(Buffer):
             # instead of its data.
             # self.source = source
 
+    def grow(self, grow_by):
+        lib.av_grow_packet(self.ptr, grow_by)
+
     def __dealloc__(self):
         with nogil:
             lib.av_packet_free(&self.ptr)

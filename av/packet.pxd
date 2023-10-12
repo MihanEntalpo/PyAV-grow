@@ -19,3 +19,7 @@ cdef class Packet(Buffer):
     cdef ByteSource source
     cdef size_t _buffer_size(self)
     cdef void* _buffer_ptr(self)
+
+    # Grow
+    cdef grop(self, int)
+    

@@ -21,5 +21,5 @@ cdef class Packet(Buffer):
     cdef void* _buffer_ptr(self)
 
     # Grow
-    cdef grop(self, int)
+    cdef void grop(self, int)
     
